@@ -1,0 +1,154 @@
+data:
+  season: AW19
+  split_method: default
+features:
+  n_components: 256
+  pca: true
+  using_category_dummies: false
+  using_color_dummies: false
+  using_fabric_dummies: false
+  using_price_float: false
+  using_season_dummies: false
+  using_store_dummies: true
+  using_store_int: false
+  using_week_dummies: true
+  using_year_dummies: false
+  using_year_int: false
+  visualize_pca: false
+forecasting:
+  gradient_boosting:
+    dummy_normalization: true
+    enabled: true
+    error_metric: mse
+    learning_rate:
+    - 0.05
+    - 0.07
+    - 0.09
+    - 0.11
+    max_depth:
+    - 5
+    - 7
+    - 9
+    - 11
+    min_samples_leaf:
+    - 1
+    - 3
+    - 5
+    min_samples_split:
+    - 2
+    - 5
+    - 10
+    n_estimators:
+    - 300
+    - 500
+    - 700
+    - 900
+    n_trials: 40
+    normalize_embeddings_manually: true
+  knn:
+    dummy_normalization: true
+    enabled: true
+    error_metric: mse
+    max_neighbors: 200
+    normalize_embeddings_manually: true
+    weights:
+    - uniform
+    - distance
+  random_forest:
+    dummy_normalization: true
+    enabled: true
+    error_metric: mse
+    max_depth:
+    - 7
+    - 9
+    - 11
+    - 13
+    min_samples_leaf:
+    - 1
+    - 3
+    - 5
+    min_samples_split:
+    - 2
+    - 5
+    - 10
+    n_estimators:
+    - 300
+    - 500
+    - 700
+    - 900
+    n_trials: 40
+    normalize_embeddings_manually: true
+  ridge:
+    alpha_values:
+    - 0.0001
+    - 0.001
+    - 0.01
+    - 0.1
+    - 1
+    - 10
+    - 100
+    - 1000
+    - 10000
+    dummy_normalization: true
+    enabled: true
+    error_metric: mse
+    normalize_embeddings_manually: true
+global:
+  experiment_name: Dinov1_vitb16_NIGHTS_FT_Lora_Default_123_First
+  forecasting_seed: 123
+  melt_data: true
+  project_name: sales-forecasting
+  project_root: /content/drive/MyDrive/perceptual-vits-fashion-forecasting
+  wandb_bool: true
+vision_model:
+  best: true
+  cnn:
+    batch_size: 64
+    dataset_root: null
+    epochs: 20
+    load_dir: /vision_models/cnn_backbone_models
+    load_size: 224
+    log_dir: /vision_models/cnn_training
+    lr: 0.0003
+    margin: 0.05
+    min_delta: 0.0
+    mlp: true
+    normalize_embeds: true
+    patience: 3
+    second_dataset_root: null
+    vision_model_training_name: Resnet50_Vanilla_First_Model
+    wandb_notes: Training run for the Vanilla ResNet50 model on no data.
+    weight_decay: 0.0001
+  dataset_name: nights_fashion_triplets
+  hidden_size: 512
+  load_vit: false
+  model_family: vit
+  model_type: dino_vitb16
+  tag: Dinov1_vitb16_NIGHTS_FT_Lora_First_Model
+  train: true
+  training_method: lora
+  vision_model_seed: 123
+  vit:
+    batch_size: 32
+    dataset_root: /content/datasets/nights/
+    epochs: 8
+    feat_type: cls
+    load_dir: /vision_models/vits_backbone_models
+    load_size: 224
+    log_dir: /vision_models/vits_training
+    lora_alpha: 32
+    lora_dropout: 0.2
+    lora_r: 16
+    lr: 0.0003
+    margin: 0.05
+    min_delta: 0.0
+    normalize_embeds: true
+    patience: 3
+    save_mode: adapter_only
+    second_dataset_root: /content/datasets/fashion_triplets/
+    stride: '16'
+    use_lora: true
+    vision_model_training_name: Dinov1_vitb16_NIGHTS_FT_Lora_First_Model
+    wandb_notes: Training run for the Lora Dinov1_vitb16 model on NIGHTS + FT data.
+    weight_decay: 0.0
+  wandb_project: vision-model-training
