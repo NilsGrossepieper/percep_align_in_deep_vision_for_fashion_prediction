@@ -1,20 +1,31 @@
-git+https://github.com/openai/CLIP.git
-configargparse
-dists-pytorch
-lpips
+# Core
 numpy
-open-clip-torch
 pandas
-peft>=0.2.0
-Pillow
-pytorch-lightning
-PyYAML
 scipy
-tensorboard
-timm
-torch
-torchmetrics
-torchvision
 tqdm
+PyYAML
+Pillow>=10.1.0
+
+# Deep Learning
+torch
+torchvision
+torchmetrics
+pytorch-lightning
+timm
 transformers
+open-clip-torch
+peft>=0.2.0
+
+# Perceptual similarity & alignment
+lpips
+dists-pytorch
+
+# Experiment tracking & logging
+tensorboard
 wandb
+
+# Utilities
+configargparse
+
+# OpenAI CLIP
+git+https://github.com/openai/CLIP.git
