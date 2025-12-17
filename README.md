@@ -36,5 +36,5 @@ The overall training process is illustrated below.
 
 Below are some example prediction for some random fashion items for the DINOv1 model.
 
-![Example Predictions](prediction_examples_dinov1_lora.png)
+![Example Predictions](visualizations/prediction_examples_dinov1_lora.png)
 
