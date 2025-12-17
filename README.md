@@ -6,11 +6,13 @@ Deep vision models are aligned using human-annotated image triplets from both a 
 
 ## Experimental Pipeline
 
-The experiments in this repository follow a three-stage pipeline:
+The experiments in this repository follow a four-stage pipeline:
 1. **Perceptual alignment**: Deep vision models are fine-tuned using human similarity judgments.
 2. **Embedding extraction**: Fashion product images are embedded using the (fine-tuned or vanilla) vision models.
 3. **Sales prediction**: Regression models are trained on the image embeddings together with contextual metadata.
+4. **Statistical evaluation**: A paired bootstrap test is applied to compare prediction errors and assess whether perceptual alignment leads to statistically significant improvements.
 
 The overall training and evaluation process is illustrated below.
 
-![Training Process](visualizations/Training%20Process.pdf)
+![Training Process](visualizations/Training_Process.png)
+
