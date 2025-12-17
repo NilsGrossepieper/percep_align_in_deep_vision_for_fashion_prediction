@@ -91,7 +91,7 @@ The experiments in this repository were primarily developed and executed on **Go
   ```bash
   pip install -r requirements.txt
 
-  ## Usage
+## Usage
 
 The experimental workflow in this repository is configuration-driven and mainly relies on three notebooks. All experiments are controlled via YAML configuration files located in the `config/` directory.
 
