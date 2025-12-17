@@ -59,3 +59,33 @@ Below are some example prediction for some random fashion items for the DINOv1 m
 ├── visualization.ipynb             # Creates figures and plots for analysis
 └── wandb_key                       # Weights & Biases API key file (not tracked, required for logging)
 
+## Setup
+
+The experiments in this repository were primarily developed and executed on **Google Colab**. When running the code in a different environment, a few adaptations are required.
+
+### 1. Environment
+- The notebooks contain **Google Colab–specific code** (e.g., Colab paths and setup cells).
+- If you do not use Google Colab, the **first cell of each notebook must be removed**, and the project root paths must be adapted accordingly.
+- The Python scripts in `src/` are environment-agnostic and do not require modification.
+
+### 2. Datasets
+- The `datasets/` folder contains a notebook that loads and prepares:
+  - the **NIGHTS** perceptual alignment dataset,
+  - the **Visuelle2.0** fashion sales dataset.
+- These datasets are required to run the experiments.
+- The same notebook also prepares the **fashion triplet dataset** used in this thesis; however, this dataset is **not publicly available** and must be provided separately.
+
+### 3. Vision Models
+- The `vision_model_training_script/` directory contains a notebook that loads and stores all deep vision models used in this thesis (e.g., ResNet-50, CLIP, DINO variants).
+- This step must be executed before embedding extraction or sales prediction experiments.
+
+### 4. Experiment Tracking (Optional)
+- Experiment tracking is performed using **Weights & Biases (W&B)**.
+- To enable logging, a file named `wandb_key` containing a valid W&B API key must be created locally.
+- This file is **not tracked** in the repository and can be omitted if experiment tracking is not required.
+
+### 5. Dependencies
+- All required Python packages are listed in `requirements.txt`.
+- Install dependencies using:
+  ```bash
+  pip install -r requirements.txt
