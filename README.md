@@ -38,3 +38,20 @@ Below are some example prediction for some random fashion items for the DINOv1 m
 
 ![Example Predictions](visualizations/prediction_examples_dinov1_lora.png)
 
+## Repository Structure
+
+├── README.md
+├── requirements.txt
+├── config/                         # YAML configuration files for experiment settings
+├── datasets/                       # Perceptual alignment datasets (NIGHTS, Fashion Triplets) and fashion sales datasets
+├── notebooks/                      # Contains notebooks for visualzations
+├── src/                            # Source code for data processing, training, and evaluation
+├── visualizations/                 # Generated figures and visual assets
+├── vision_model_training_script/   # Scripts for fine-tuning deep vision models (MLP / LoRA)
+├── experiments/                    # Stored experiment results (created during execution, not tracked)
+├── models/                         # Trained prediction models (created during execution, not tracked)
+├── studies/                        # Hyperparameter optimization studies (created during execution, not tracked)
+├── main_training_script.ipynb  # Trains sales prediction models on extracted embeddings
+├── statistical_testing.ipynb   # Paired bootstrap tests for statistical significance
+├── visualization.ipynb         # Creates figures and plots for analysis
+└── wandb_key                       # Weights & Biases API key file (not tracked, required for logging)
