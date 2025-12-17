@@ -58,6 +58,7 @@ Below are some example prediction for some random fashion items for the DINOv1 m
 ├── statistical_testing.ipynb       # Paired bootstrap tests for statistical significance
 ├── visualization.ipynb             # Creates figures and plots for analysis
 └── wandb_key                       # Weights & Biases API key file (not tracked, required for logging)
+```text
 
 ## Setup
 
