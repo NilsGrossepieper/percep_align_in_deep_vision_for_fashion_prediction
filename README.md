@@ -14,5 +14,5 @@ The experiments in this repository follow a four-stage pipeline:
 
 The overall training and evaluation process is illustrated below.
 
-![Training Process](visualizations/Training_Process.pdf)
+![Training Process](visualizations/training_process.png)
 
