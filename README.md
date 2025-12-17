@@ -12,7 +12,7 @@ The experiments in this repository follow a four-stage pipeline:
 3. **Sales prediction**: Regression models are trained on the image embeddings together with contextual metadata.
 4. **Statistical evaluation**: A paired bootstrap test is applied to compare prediction errors and assess whether perceptual alignment leads to statistically significant improvements.
 
-The overall training and evaluation process is illustrated below.
+The overall training process is illustrated below.
 
 ![Training Process](visualizations/training_process.png)
 
