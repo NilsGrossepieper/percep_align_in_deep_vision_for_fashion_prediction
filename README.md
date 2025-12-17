@@ -122,9 +122,9 @@ The experimental workflow in this repository is configuration-driven and mainly 
 This repository accompanies the Master’s thesis:
 
 **Evaluating Perceptual Alignment in Deep Vision Models for Fashion Sales Prediction**  
-Author: Nils Großepieper 
-University: Eberhard Karls Universität Tübingen  
-Year: 2025
+- Author: Nils Großepieper 
+- University: Eberhard Karls Universität Tübingen  
+- Year: 2025
 
 If you use this code or build upon this work, please cite the thesis accordingly.
 
