@@ -117,3 +117,27 @@ The experimental workflow in this repository is configuration-driven and mainly 
   - training and evaluation parameters.
 - To run a new experiment, create or modify a configuration file and execute the corresponding notebook.
 
+## Thesis Reference and Acknowledgements
+
+This repository accompanies the Master’s thesis:
+
+**Evaluating Perceptual Alignment in Deep Vision Models for Fashion Sales Prediction**  
+Author: Nils Großepieper 
+University: Eberhard Karls Universität Tübingen  
+Year: 2025
+
+If you use this code or build upon this work, please cite the thesis accordingly.
+
+### External Code and Datasets
+
+This project builds upon the following publicly available resources:
+
+- **DreamSim / NIGHTS dataset**  
+  Parts of the perceptual alignment code and the NIGHTS dataset are based on the DreamSim repository by Sundaram et al.:  
+  https://github.com/ssundaram21/dreamsim
+
+- **Visuelle2.0 dataset**  
+  Fashion sales prediction experiments use the Visuelle2.0 dataset provided by the Humatics Lab:  
+  https://humaticslab.github.io/forecasting/visuelle
+
+I gratefully acknowledge the authors of these resources for making their code and datasets publicly available.
