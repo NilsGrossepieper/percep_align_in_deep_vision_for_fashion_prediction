@@ -90,3 +90,30 @@ The experiments in this repository were primarily developed and executed on **Go
 - Install dependencies using:
   ```bash
   pip install -r requirements.txt
+
+  ## Usage
+
+The experimental workflow in this repository is configuration-driven and mainly relies on three notebooks. All experiments are controlled via YAML configuration files located in the `config/` directory.
+
+### 1. Fine-tune Vision Models
+- Use the notebook in `vision_model_training_script/` to fine-tune deep vision models using perceptual alignment.
+- The notebook loads the experiment configuration from a YAML file and performs fine-tuning based on the selected dataset, model architecture, and fine-tuning method (MLP or LoRA).
+- The resulting models are stored locally and used for embedding extraction.
+
+### 2. Train Sales Prediction Models
+- Run `main_training_script.ipynb` to train sales prediction models on the extracted image embeddings.
+- The notebook trains multiple prediction models (kNN, Ridge Regression, Random Forest, Gradient Boosting) based on the configuration settings.
+- Experiment results and trained models are saved automatically.
+
+### 3. Statistical Evaluation
+- Use `statistical_testing.ipynb` to evaluate whether perceptual alignment leads to statistically significant improvements.
+- The notebook applies a paired bootstrap test to compare prediction errors between aligned and vanilla embeddings and reports significance results.
+
+### Configuration
+- Each experiment is defined by a YAML configuration file specifying:
+  - the vision model and fine-tuning strategy,
+  - the alignment dataset,
+  - the prediction model,
+  - training and evaluation parameters.
+- To run a new experiment, create or modify a configuration file and execute the corresponding notebook.
+
