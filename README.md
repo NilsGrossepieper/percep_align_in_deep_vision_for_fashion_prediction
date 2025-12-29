@@ -55,7 +55,7 @@ Below are some example prediction for some random fashion items for the DINOv1 m
 ├── models/                         # Trained prediction models (created during execution, not tracked)
 ├── studies/                        # Hyperparameter optimization studies (created during execution, not tracked)
 ├── docs/                           # Project documentation
-│   └── master_thesis.pdf           # Master’s thesis (PDF)
+│   └── master_thesis.pdf           # Master thesis (PDF)
 ├── main_training_script.ipynb      # Trains sales prediction models on extracted embeddings
 ├── statistical_testing.ipynb       # Paired bootstrap tests for statistical significance
 ├── visualization.ipynb             # Creates figures and plots for analysis
