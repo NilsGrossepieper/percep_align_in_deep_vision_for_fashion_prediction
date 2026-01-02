@@ -20,10 +20,17 @@ The overall training process is illustrated below.
 
 ## Key Findings
 
-- **Perceptual alignment improves fashion sales prediction**
+- **Perceptual alignment improves fashion sales prediction:**
 Fine-tuning deep vision models on human perceptual similarity judgments leads to statistically significant improvements in fashion sales prediction. This holds for both large, domain-agnostic datasets (NIGHTS) and very small, domain-specific datasets (190 fashion triplets), demonstrating the high sample efficiency of human judgment data.
 
-- **Early stopping is crucial**: Excessive fine-tuning on perceptual alignment datasets can harm downstream performance, whereas early stopping consistently leads to better generalization.
+- **Prediction model choice matters more than the vision backbone:**
+Across all experiments, variation in prediction accuracy is driven more strongly by the choice of downstream prediction model than by the deep vision model itself. Nonlinear models such as Gradient Boosting and Random Forest consistently outperform simpler models like kNN and Ridge Regression. Performance gains from perceptually aligned embeddings are primarily captured by nonlinear prediction models, while simpler models relying on linear relationships or local similarity show limited or no benefit from perceptual alignment.
+
+- **Smaller vision models benefit disproportionately from alignment:**
+Larger vision models achieve stronger baseline performance in their non-aligned form, but perceptual alignment yields larger relative improvements for smaller models, narrowing and in some cases closing the performance gap. Both CNN- and ViT-based models benefit from alignment, with a more pronounced effect observed for CNNs.
+
+- **LoRA provides a small but consistent advantage over MLP fine-tuning:**
+LoRA-based fine-tuning yields slightly stronger performance than MLP-based fine-tuning across the evaluated configurations. While the difference is modest compared to the overall gains from perceptual alignment, it is consistently observable, indicating that the adaptation mechanism can provide an additional (small) benefit.
 
 Below are some example prediction for some random fashion items for the DINOv1 model.
 
